@@ -10,7 +10,7 @@ import Contact from '../../components/pages/contact/contact';
 export default function Routers(){
     return(
         <Router>
-            <Page />
+            <Publicar />
                 <Routes>
                     <Route exact path="/"  component={Page} />
                     <Route  path="/publicacao"  component={Publicar} />
