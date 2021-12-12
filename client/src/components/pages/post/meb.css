@@ -1,0 +1,25 @@
+.over {
+
+    opacity: 0;
+  
+  }
+  
+  .foto:hover .over {
+    opacity: 0.8;
+  }
+  
+  .foto{
+    display: block;
+    float:left;
+    margin-bottom: 100px;
+      
+  }
+  
+  .image{
+  
+    width:200px;/*tamanho da imagem*/
+  
+  }
+  
+  
+  
