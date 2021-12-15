@@ -1,14 +1,16 @@
-import React,{useEffect} from "react";
-import "./card.css";
-import FormDialog from "../dialog/dialogForm";
+import React,{useState,Fragment} from  'react';
+
+import "../cards/cards.css";
+
+import Form from "../../components/dialog/index";
 
 export default function Card(props) {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   
-  
-  return (
-    <>
-      <FormDialog
+  return(
+
+    <Fragment>
+      <Form
         open={open}
         setOpen={setOpen}
         title={props.name}
@@ -24,6 +26,6 @@ export default function Card(props) {
         <p className="card-cartegory">{props.category}</p>
         <h3 className="card-cost">Link:  {props.cost}</h3>
       </div>
-    </>
+    </Fragment>
   );
 }
