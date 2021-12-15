@@ -2,8 +2,15 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 import LogoUfscar from '../../../assets/img/LogoUFSCar.jpg';
+import AA from './image/equecao.jpeg';
+import AB from './image/graficos.jpeg';
+import AC from './image/linha.jpeg';
+import AD from './image/resultado.jpeg';
+import Video from './image/esquema.jpeg';
 
-import './meb.css';
+
+import '../../../styles/meb.css';
+
 
 export default function PostPage(){
     return(
@@ -17,11 +24,15 @@ export default function PostPage(){
 			</div>
 			<div className="menu">
 				<ul>
-					<li> <Link to="/">Início</Link> </li>
-					<li> <Link to="/membros">Membros</Link> </li>
-				
+                	<li> <Link to="/">Início</Link> </li>
+                	<li> <Link to="/membros">Membros</Link> </li>
+                	<li> <Link to="/pesquisa">Linha de Pesquisa </Link> </li>
+                	<li> <Link to="/publicacao">Publicações </Link></li>
+                	<li> <Link to="/contato">Contato</Link> </li>
+					<li> <Link to="/home">Home</Link> </li>
+					<li> <Link to="/login">Login</Link> </li>
 
-				</ul>
+              </ul>
 			</div>
 			<div className="corpo">
 				<div className="artigos">
@@ -160,6 +171,38 @@ export default function PostPage(){
 
 					</div>
 				</div>
+				<div className="barra-lateral">
+						<div className="espacamento">
+
+							<p className="resumo">
+							Arranjo experimental para ensaios de força e deslocamento de um IPMC
+								<img src={Video} alt="image" className="image-lateral" />
+							</p>
+								
+							<p>
+								<p className="resumo">
+								Exemplo de coleta de dados de visão de máquina para acompanhamento do deslocamento de um IPMC durante ataução
+									<img src={AA} alt="Image" className='image-lateral'/>
+								</p>
+							</p>
+							<p className='resumo'>
+							Mecanismo de dispersão de nanotubos de carbono em 
+							látex de borracha natural com aplicação de ultra-som, 
+							em banho e de ponteira								
+							<img src={AB} className="image-lateral" alt="Image"/>
+							</p>
+							<p className='resumo'>
+							Deformação no tempo do IPMC quando aplicada uma diferença de potencial elétrico
+								<img src={AC} className="image-lateral" alt="Iamge"/>
+							</p>
+							<p className='resumo'>
+							
+							Resultado de deslocamento controlado de um 
+							IPMC através de um sistema e controle do tipo PI								
+							<img src={AD} className="image-lateral" alt="Iamge"/>
+							</p>
+						</div>
+					</div>
 			</div>
 			<div clclassNameass="rodape">
 				<div className="inter">

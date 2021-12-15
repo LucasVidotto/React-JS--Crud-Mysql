@@ -1,6 +1,9 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 import './form.css';
+
 import LogoUfscar from '../../../assets/img/LogoUFSCar.jpg';
 
 export default function Contact(){
@@ -21,13 +24,15 @@ export default function Contact(){
 			</div>
 			<div class="menu">
 				<ul>
-					<li> <a href="index.html">Início</a> </li>
-					<li> <a href="membros.html">Membros</a> </li>
-					<li> <a href="pesquisa.html">Linha de Pesquisa </a> </li>
-					<li> <a href="publicacao.html">Publicações </a></li>
-					<li> <a href="contato.html">Contato</a> </li>
+					<li> <Link to="/">Início</Link> </li>
+					<li> <Link to="/membros">Membros</Link> </li>
+					<li> <Link to="/pesquisa">Linha de Pesquisa </Link> </li>
+					<li> <Link to="/publicacao">Publicações </Link></li>
+					<li> <Link to="/contato">Contato</Link> </li>
+					<li> <Link to="/home">Home</Link> </li>
+					<li> <Link to="/login">Login</Link> </li>
 
-				</ul>
+              </ul>
 			</div>
 			<div class="corpo">
 				<div class="artigos">   

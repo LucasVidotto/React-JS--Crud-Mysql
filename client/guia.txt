@@ -1,82 +1,41 @@
-const [values, setValues] = useState();
-  const [listCard, setListCard] = useState([]);
-  console.log(listCard);
-  const handleRegisterGame = () => {
-    Axios.post("http://localhost:3001/register", {
-      name: values.name,
-      cost: values.cost,
-      category: values.category,
-    }).then(() => {
-      Axios.post("http://localhost:3001/search", {
-        name: values.name,
-        cost: values.cost,
-        category: values.category,
-      }).then((response) => {
-        setListCard([
-          ...listCard,
-          {
-            id: response.data[0].id,
-            name: values.name,
-            cost: values.cost,
-            category: values.category,
-          },
-        ]);
-      });
-    });
-  };
-
-  useEffect(() => {
-    Axios.get("http://localhost:3001/getCards").then((response) => {
-      setListCard(response.data);
-    });
-  }, []);
-
-  const handleaddValues = (value) => {
-    setValues((prevValues) => ({
-      ...prevValues,
-      [value.target.name]: value.target.value,
-    }));
-  };  
-
-
-      <div className="register-container">
-        <h1 className="register-title">Scrim Shop</h1>
-
-        <input
-          type="text"
-          name="name"
-          placeholder="Nome"
-          className="register-input"
-          onChange={handleaddValues}
-        />
-        <input
-          type="text"
-          placeholder="Preço"
-          name="cost"
-          className="register-input"
-          onChange={handleaddValues}
-        />
-        <input
-          type="text"
-          placeholder="Categoria"
-          name="category"
-          className="register-input"
-          onChange={handleaddValues}
-        />
-
-        <button onClick={handleRegisterGame} className="register-button">
-          Cadastrar
-        </button>
-      </div>
-
-      {listCard.map((val) => (
-        <Card
-          listCard={listCard}
-          setListCard={setListCard}
-          key={val.id}
-          id={val.id}
-          name={val.name}
-          cost={val.cost}
-          category={val.category}
-        />
-      ))}
+<div classNome="corpo">
+				<div className="arti">
+					<div className="espacamento">
+						<div className="foto">
+							<legend className="legen">
+								Carlos Henrique Carlos<br />
+								Coordenador
+							</legend>
+							<p><Link to={{pathname:"https://www.google.com.br"}} target="__blank">
+								<img src={Carlos}
+								className="image"
+								title="lattes"
+								align="left"
+								style={styles}
+								/></Link>
+								<b>&nbsp;&nbsp;&nbsp;&nbsp;Formação</b>:<br /><br />
+								<p className="texto">Graduação em Engenharia de Materiais(UFSCar)<br /></p>
+								<p className="texto">Mestre em Engenharia dos Materiais(UFSCar)<br /></p>
+								<p className="texto">Doutor em Ciência e Engenharia dos Materias(UFSCar)<br /></p>
+								
+							</p>
+						</div>
+					</div>
+				</div>
+				<div className="barra-lateral">
+					<div className="espacamento">
+						Entrevista para o LAbI: <p className="resumo">Pesquisas da UFSCar desenvolvem materiais que atuam como músculos artificiais</p>
+						<td className="f1" rowspan="6"><a href="http://www.labi.ufscar.br/2017/01/03/pesquisas-da-ufscar-desenvolvem-materiais-que-atuam-como-musculos-artificiais/  "><img title="" src="imagem/video.jpg" alt="poster"/></a></td>
+						
+						<p>
+							<img src="" alt="Graficos" className="vertical-img"/>
+						</p>
+						<p>
+							<img src="" className="vertical-img" />
+						</p>
+						<p>
+							<img src="" className="vertical-img" />
+						</p>
+					</div>
+				</div>
+			</div>

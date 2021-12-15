@@ -1,19 +1,28 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Publicar from '../pages/post/index';
 import Page from '../pages/public/index';
-import Header from '../pages/Header/header';
+import Contact from '../pages/contact/contact';
+import Publicar from '../pages/post/index';
+import Membros from '../pages/private/membro';
+import Card from '../cards/cards';
+import Home from '../pages/home/home';
+import Pesquisa from '../pages/search/search';
+import Login from '../../components/pages/Log/index';
 
-import Contact from '../../components/pages/contact/contact';
 
 export default function Routers(){
     return(
         <Router>
-            <Publicar />
                 <Routes>
-                    <Route exact path="/"  component={Page} />
-                    <Route  path="/publicacao"  component={Publicar} />
+                    <Route  path="/"  element={< Page />} />
+                    <Route  path="/publicacao"  element={<Publicar />} />
+                    <Route path="/contato" element={<Contact />}/>
+                    <Route path="/membros" element={<Membros />}/>
+                    <Route path="/pesquisa" element={<Pesquisa />} />
+                    <Route path="/card" element={<Card />}/>
+                    <Route path="/home" element={<Home />}/>
+                    <Route path="/login" element={<Login />} />
                 </Routes>
         </Router>
     );

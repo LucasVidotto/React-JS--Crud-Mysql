@@ -1,10 +1,11 @@
-import React from "react";
+import React,{useEffect} from "react";
 import "./card.css";
 import FormDialog from "../dialog/dialogForm";
 
 export default function Card(props) {
   const [open, setOpen] = React.useState(false);
-
+  
+  
   return (
     <>
       <FormDialog
@@ -21,7 +22,7 @@ export default function Card(props) {
         <h1 className="card-title">{props.name}</h1>
         <p className="card-id">{props.id}</p>
         <p className="card-cartegory">{props.category}</p>
-        <h3 className="card-cost">R${props.cost}</h3>
+        <h3 className="card-cost">Link:  {props.cost}</h3>
       </div>
     </>
   );

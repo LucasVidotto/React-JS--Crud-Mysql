@@ -30,5 +30,6 @@
 }
 
 .card-container:hover {
-  background-color: aqua;
+  background-image: linear-gradient(blue, red);
+  color:white;
 }
